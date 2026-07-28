@@ -1,0 +1,98 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 100%; /* prevents overflow*/
+}
+
+.search-bar input {
+    border: none;
+    padding: 7px 10px;
+    outline: none;
+    width: 150px;
+    background-color: rgba(244, 87, 87, 0.5);
+    font-size: 14px;
+}
+
+.search-bar button {
+    border: none;
+    background-color: #e60000;
+    color: white;
+    padding: 7px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-bar button:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 120px;
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    .search-bar button {
+        font-size: 13px;
+        padding: 6px 8px;
+    }    
+
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .search-bar button {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+        border-top: 1px solid #ccc;
+    }
+
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    flex-wrap: wrap;/*the tabs wrap*/
+    gap: 15px;
+}
+
+.nav-left a,
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    position: relative;
+    font-size: 16px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-left a.active,
+.nav-right a.active {
+    color: red;
+    font-weight: bold;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+}
+
+.nav-left a:hover, 
+.nav-right a:hover {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+}
